@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation In CSS</title>
+    <link rel="shortcut icon" href="/Images/ball.png" type="image/x-icon">
+    <style>
+        .box1{
+            background-color: blue;
+            /* border:solid 5px black; */
+            width: 200px ;
+            height: 50px;
+            border-radius: 30px;
+            position: relative;
+            animation-name: rightmovement;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            
+
+
+        }
+ .box2{
+            background-color: blue;
+            width: 200px ;
+            height: 50px;
+            border-radius: 20px;
+            position: relative;
+             /* animation : duration |easing-function |delay |    Iteration-count | direction | fill-mode | play-state | name  */
+            animation: 2s linear 0s infinite alternate none running leftmovement;
+        }  
+        @keyframes rightmovement{
+                from{
+                        top:0px;
+                        left:0px;
+                }
+                to{
+                        top:10px;
+                        left:1200px;
+                }
+            }
+           @keyframes leftmovement {
+            from{
+                        top: 630px;
+                        left:1350px;
+                }
+                to{
+                        top:630px;
+                        left:0px; 
+                }
+           }
+            .circle{
+                background-color: red;
+                border-radius: 500px;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                animation: 5s linear 0s infinite alternate none running circlemovement ;
+            }   
+            @keyframes circlemovement {
+                0%{
+                    top: 10px;
+                    left:10px;
+                }
+                30%{
+                    top: 604px;
+                    left:10px;
+                }
+                50%{
+                    top: 20px;
+                    left:500px;
+                }
+                90%{
+                    top: 500px;
+                    left:500px;
+                }
+                95%{
+                    top: 10px;
+                    left:600px;
+                }
+                100%{
+                    top: 600px;
+                    left:600px;
+                }
+            
+            }
+            
+    </style>
+           
+
+
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="circle"></div>
+
+
+</body>
+</html>
